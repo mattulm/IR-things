@@ -1,0 +1,53 @@
+@echo off
+
+REM
+REM Basic Information
+hostname >> %ComputerName%.hostinfo.txt
+ver >> %ComputerName%.hostinfo.txt
+ipconfig /all >> %ComputerName%.hostinfo.txt
+
+
+REM
+REM Users
+whoami >> %ComputerName%.users.txt
+net users >> %ComputerName%.users.txt
+net localgroup >> %ComputerName%.users.txt
+net accounts >> %ComputerName%.users.txt
+WMIC /Node:remotecomputer ComputerSystem Get UserName >> %ComputerName%.users.txt
+NET LOCALGROUP Administrators >> %ComputerName%.users.txt
+
+
+REM
+REM Network Information
+ipconfig /all >> %ComputerName%.network.txt
+ipconfig /displaydns >> %ComputerName%.network.txt
+arp -av >> %ComputerName%.network.txt
+netstat -ano >> %ComputerName%.network.txt
+netstat -anb >> %ComputerName%.network.txt
+NET SHARE >> %ComputerName%.network.txt
+nbtstat -c >> %ComputerName%.network.txt
+nbtstat -S >> %ComputerName%.network.txt
+NET Session >> %ComputerName%.network.txt
+NET CONFIG Workstation >> %ComputerName%.network.txt
+NET CONFIG Server >> %ComputerName%.network.txt
+NET STATISTICS Workstation >> %ComputerName%.network.txt
+NET STATISTICS Server >> %ComputerName%.network.txt
+REM
+REM Network Information End
+REM
+
+REM
+REM Running Processes
+REM tasklist /v >> %ComputerName%.process.txt
+REM
+REM
+
+
+REM
+REM Driver Query
+DRIVERQUERY /V /FO CSV > %ComputerName%.driverquery.csv
+
+
+REM
+REM Security Updates Installed
+WMIC QFE List >> %ComputerName%.updatesquery.txt
