@@ -2,34 +2,64 @@
 
 REM
 REM Basic Information
+REM
+date /t >> %ComputerName%.hostinfo.txt
 hostname >> %ComputerName%.hostinfo.txt
 ver >> %ComputerName%.hostinfo.txt
 ipconfig /all >> %ComputerName%.hostinfo.txt
+REM
+REM Basic Information End
+REM
 
 
 REM
 REM Users
+REM
+date /t >> %ComputerName%.users.txt
+hostname >> %ComputerName%.users.txt
+ver >> %ComputerName%.users.txt
 whoami >> %ComputerName%.users.txt
 net users >> %ComputerName%.users.txt
 net localgroup >> %ComputerName%.users.txt
 net accounts >> %ComputerName%.users.txt
 WMIC /Node:remotecomputer ComputerSystem Get UserName >> %ComputerName%.users.txt
 NET LOCALGROUP Administrators >> %ComputerName%.users.txt
+REM
+REM Users Information End
+REM
 
 
 REM
 REM Network Information
+REM
+echo " "
+echo " Network information for Incident Response "
+echo " "
+date /t >> %ComputerName%.network.txt
+hostname >> %ComputerName%.network.txt
+ver >> %ComputerName%.network.txt
+echo " "
 ipconfig /all >> %ComputerName%.network.txt
 ipconfig /displaydns >> %ComputerName%.network.txt
+echo " "
 arp -av >> %ComputerName%.network.txt
+echo " "
 netstat -ano >> %ComputerName%.network.txt
+echo " "
 netstat -anb >> %ComputerName%.network.txt
-NET SHARE >> %ComputerName%.network.txt
+
+echo " "
 nbtstat -c >> %ComputerName%.network.txt
+echo "" 
 nbtstat -S >> %ComputerName%.network.txt
+echo " "
+NET SHARE >> %ComputerName%.network.txt
+echo " "
 NET Session >> %ComputerName%.network.txt
+echo " "
 NET CONFIG Workstation >> %ComputerName%.network.txt
 NET CONFIG Server >> %ComputerName%.network.txt
+echo " "
 NET STATISTICS Workstation >> %ComputerName%.network.txt
 NET STATISTICS Server >> %ComputerName%.network.txt
 REM
@@ -38,16 +68,38 @@ REM
 
 REM
 REM Running Processes
+REM
+date /t >> %ComputerName%.process.txt
+hostname >> %ComputerName%.process.txt
+ver >> %ComputerName%.process.txt
+echo " "
 REM tasklist /v >> %ComputerName%.process.txt
 REM
-REM
+REM Running Processes End
+REM 
 
 
 REM
 REM Driver Query
+REM
+date /t >> %ComputerName%.driverquery.csv
+hostname >> %ComputerName%.driverquery.csv
+ver >> %ComputerName%.driverquery.csv
+echo " "
 DRIVERQUERY /V /FO CSV > %ComputerName%.driverquery.csv
+REM
+REM Driver Query End
+REM
 
 
 REM
 REM Security Updates Installed
+REM
+date /t >> %ComputerName%.updatesquery.txt
+hostname >> %ComputerName%.updatesquery.txt
+ver >> %ComputerName%.updatesquery.txt
+echo " "
 WMIC QFE List >> %ComputerName%.updatesquery.txt
+REM
+REM Security Updates Installed End
+REM
