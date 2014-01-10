@@ -47,7 +47,6 @@ echo " "
 netstat -ano >> %ComputerName%.network.txt
 echo " "
 netstat -anb >> %ComputerName%.network.txt
-
 echo " "
 nbtstat -c >> %ComputerName%.network.txt
 echo "" 
