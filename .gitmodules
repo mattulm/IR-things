@@ -16,3 +16,6 @@
 [submodule "yara/yarasource"]
 	path = yara/yarasource
 	url = https://github.com/plusvic/yara.git
+[submodule "misc/analyzeMFT"]
+	path = misc/analyzeMFT
+	url = https://github.com/dkovar/analyzeMFT.git
