@@ -1,0 +1,3 @@
+[submodule "arbor_yara"]
+	path = arbor_yara
+	url = https://github.com/arbor/yara.git
