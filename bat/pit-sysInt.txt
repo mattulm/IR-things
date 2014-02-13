@@ -1,0 +1,5 @@
+pslist.exe >> pslist.txt
+listdlls.exe >> listdlls.txt
+handle.exe >> handle.txt
+netstat -an >> netstat.txt
+psloggedon.exe >> psloggedon.txt
