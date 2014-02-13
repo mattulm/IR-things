@@ -1,3 +1,15 @@
 [submodule "arbor_yara"]
 	path = arbor_yara
 	url = https://github.com/arbor/yara.git
+[submodule "yara/arbornetworks"]
+	path = yara/arbornetworks
+	url = https://github.com/arbor/yara.git
+[submodule "ida/arbornetworks"]
+	path = ida/arbornetworks
+	url = https://github.com/arbor/idb.git
+[submodule "yara/YaraGenerator"]
+	path = yara/YaraGenerator
+	url = https://github.com/Xen0ph0n/YaraGenerator.git
+[submodule "misc/SpiderLabsRepo"]
+	path = misc/SpiderLabsRepo
+	url = https://github.com/SpiderLabs/Malware_Analysis
