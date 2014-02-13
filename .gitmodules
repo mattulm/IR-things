@@ -13,3 +13,6 @@
 [submodule "misc/SpiderLabsRepo"]
 	path = misc/SpiderLabsRepo
 	url = https://github.com/SpiderLabs/Malware_Analysis
+[submodule "yara/yarasource"]
+	path = yara/yarasource
+	url = https://github.com/plusvic/yara.git
