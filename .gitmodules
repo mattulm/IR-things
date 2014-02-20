@@ -19,3 +19,6 @@
 [submodule "misc/analyzeMFT"]
 	path = misc/analyzeMFT
 	url = https://github.com/dkovar/analyzeMFT.git
+[submodule "network/chopshop"]
+	path = network/chopshop
+	url = https://github.com/MITRECND/chopshop.git
