@@ -22,3 +22,6 @@
 [submodule "network/chopshop"]
 	path = network/chopshop
 	url = https://github.com/MITRECND/chopshop.git
+[submodule "misc/wipster"]
+	path = misc/wipster
+	url = https://github.com/TheDr1ver/WIPSTER.git
