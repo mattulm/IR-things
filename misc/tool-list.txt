@@ -33,12 +33,17 @@ WinHex - http://www.x-ways.net/winhex/
 IDA Pro Free
 CCleaner
 Malcode Analyst Pack - http://sandsprite.com/blogs/index.php?uid=7&pid=185
+RegEx Coach - http://www.weitz.de/regex-coach/#install
+
 
 
 Packer Explorers:
 	http://www.woodmann.com/collaborative/tools/images/Bin_AT4RE_FastScanner_2010-1-10_4.2_FastScanner_v3.0_Final.zip
 	PEiD
 	PE Explorer
+	pev - http://pev.sourceforge.net/
+	
+	
 	
 	
 Packer signatures:
