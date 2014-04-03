@@ -1,7 +1,49 @@
-Firefox
-Google Chrome
+Word, Power Point, Visio, Excel Viewers
+Sumatra PDF Viewer
+Adobe Reader & Flash
+Oracle Java Run Time
+Python 2.7
+volatility standalone
+Microsoft .NET 4.x
+Mandiant Redline
+Case Notes
+UNIX tools (grep, ls, egrep, find, wget, 
+Firefox (FoxyProxy, No Script, Javascript DeObfuscator, 
+Google Chrome (Urlquery Plugin, 
+Opera Browser (
+Safari Browser (
 Wireshark
-PEiD
 UPX Packer/unPacker
 RegShot
 SysInternals Suite
+Titanium Studio
+WinDirStat
+GitHub & GitHub Shell
+burpsuite free
+net miner
+dependency walker
+putty & pscp
+winrar
+nmap
+maltego
+sysAnalyzer (http://sandsprite.com/blogs/index.php?uid=7&pid=185)
+clamAV
+PDF Stream Dumper Setup
+WinHex - http://www.x-ways.net/winhex/
+IDA Pro Free
+CCleaner
+Malcode Analyst Pack - http://sandsprite.com/blogs/index.php?uid=7&pid=185
+
+
+Packer Explorers:
+	http://www.woodmann.com/collaborative/tools/images/Bin_AT4RE_FastScanner_2010-1-10_4.2_FastScanner_v3.0_Final.zip
+	PEiD
+	PE Explorer
+	
+	
+Packer signatures:
+	http://www.woodmann.com/collaborative/tools/images/Bin_Neil%27s_Collection_of_Packer_Signatures_2013-11-9_12.58_userdb.rar
+	http://handlers.sans.org/jclausing/userdb.txt (http://isc.sans.org/diary.html?storyid=3432)
+	http://research.pandasecurity.com/blogs/images/userdb.txt
+	
+	
