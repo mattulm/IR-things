@@ -28,3 +28,6 @@
 [submodule "misc/fetools"]
 	path = misc/fetools
 	url = https://github.com/fireeye/tools.git
+[submodule "volplugs/codedetective"]
+	path = volplugs/codedetective
+	url = https://github.com/blackthorne/Codetective.git
