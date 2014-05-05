@@ -31,3 +31,60 @@
 [submodule "volplugs/codedetective"]
 	path = volplugs/codedetective
 	url = https://github.com/blackthorne/Codetective.git
+[submodule "yara/1an0rmus"]
+	path = yara/1an0rmus
+	url = https://github.com/1aN0rmus/Yara.git
+[submodule "yara/3vangel1st"]
+	path = yara/3vangel1st
+	url = https://github.com/3vangel1st/Yara.git
+[submodule "yara/yaraprocessor"]
+	path = yara/yaraprocessor
+	url = https://github.com/MITRECND/yaraprocessor.git
+[submodule "yara/HorribleCanoe"]
+	path = yara/HorribleCanoe
+	url = https://github.com/paralax/HorribleCanoe.git
+[submodule "yara/phoul"]
+	path = yara/phoul
+	url = https://github.com/Phoul/yara_rules.git
+[submodule "yara/malwared"]
+	path = yara/malwared
+	url = https://github.com/malwared/yara-rules.git
+[submodule "yara/sysforensicsyararules"]
+	path = yara/sysforensicsyararules
+	url = https://github.com/sysforensics/YaraRules.git
+[submodule "yara/jackryaramemory"]
+	path = yara/jackryaramemory
+	url = https://github.com/jackcr/yara-memory.git
+[submodule "yara/shannaniggansYara_rules"]
+	path = yara/shannaniggansYara_rules
+	url = https://github.com/shannaniggans/Yara_rules.git
+[submodule "yara/zerklabsyarasigs"]
+	path = yara/zerklabsyarasigs
+	url = https://github.com/zerklabs/yarasigs.git
+[submodule "yara/YaraTool"]
+	path = yara/YaraTool
+	url = https://github.com/chrislee35/yaratool.git
+[submodule "yara/yaranids"]
+	path = yara/yaranids
+	url = https://github.com/ckane/yaranids.git
+[submodule "yara/scsichmassyaratest"]
+	path = yara/scsichmassyaratest
+	url = https://github.com/scsich/mass-yara-test.git
+[submodule "yara/peid4yara"]
+	path = yara/peid4yara
+	url = https://github.com/sroberts/peid4yara.git
+[submodule "yara/simpleyaragenerator"]
+	path = yara/simpleyaragenerator
+	url = https://github.com/JumpCallPop/simple-yara-generator.git
+[submodule "yara/pagebrute"]
+	path = yara/pagebrute
+	url = https://github.com/matonis/page_brute.git
+[submodule "yara/YaraPCAP"]
+	path = yara/YaraPCAP
+	url = https://github.com/kevthehermit/YaraPcap
+[submodule "IOCs/sysforensicsIOCs"]
+	path = IOCs/sysforensicsIOCs
+	url = https://github.com/sysforensics/IOCs.git
+[submodule "misc/sysforensicsBARFF"]
+	path = misc/sysforensicsBARFF
+	url = https://github.com/sysforensics/barff.git
