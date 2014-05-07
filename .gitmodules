@@ -88,3 +88,9 @@
 [submodule "misc/sysforensicsBARFF"]
 	path = misc/sysforensicsBARFF
 	url = https://github.com/sysforensics/barff.git
+[submodule "misc/ESETmalwareIOC"]
+	path = misc/ESETmalwareIOC
+	url = https://github.com/eset/malware-ioc.git
+[submodule "IOCs/kylecooperIOCs"]
+	path = IOCs/kylecooperIOCs
+	url = https://github.com/kylecooper/IOCs.git
