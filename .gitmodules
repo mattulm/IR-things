@@ -94,3 +94,6 @@
 [submodule "IOCs/kylecooperIOCs"]
 	path = IOCs/kylecooperIOCs
 	url = https://github.com/kylecooper/IOCs.git
+[submodule "volplugs/javarat"]
+	path = volplugs/javarat
+	url = https://github.com/Rurik/Volatility_Plugins.git
