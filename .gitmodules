@@ -97,3 +97,30 @@
 [submodule "volplugs/javarat"]
 	path = volplugs/javarat
 	url = https://github.com/Rurik/Volatility_Plugins.git
+[submodule "volplugs/invoke-IR"]
+	path = volplugs/invoke-IR
+	url = https://github.com/Invoke-IR/Volatility.git
+[submodule "volplugs/openvpn"]
+	path = volplugs/openvpn
+	url = https://github.com/Phaeilo/vol-openvpn.git
+[submodule "volplugs/carlpulley"]
+	path = volplugs/carlpulley
+	url = https://github.com/carlpulley/volatility.git
+[submodule "volplugs/dutchy"]
+	path = volplugs/dutchy
+	url = https://github.com/Dutchy-/volatility-plugins.git
+[submodule "volplugs/jeffbryner"]
+	path = volplugs/jeffbryner
+	url = https://github.com/jeffbryner/volatilityPlugins.git
+[submodule "malware/maltrieve"]
+	path = malware/maltrieve
+	url = https://github.com/technoskald/maltrieve.git
+[submodule "malware/znb"]
+	path = malware/znb
+	url = https://github.com/znb/Malware.git
+[submodule "malware/web-malware-collection"]
+	path = malware/web-malware-collection
+	url = https://github.com/nikicat/web-malware-collection.git
+[submodule "malware/malwarez"]
+	path = malware/malwarez
+	url = https://github.com/YakindanEgitim/malwarez.git
