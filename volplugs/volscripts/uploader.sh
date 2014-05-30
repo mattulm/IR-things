@@ -3,17 +3,21 @@
 # Set up some global variables
 VOL="vol.py"
 HOME="/home/sansforensics"
-VTSE="/home/sansforensics/tools/dsvtsearch.py"
-VTSS="/home/sansforensics/tools/dsvtsubmit.py"
-GTEC="gtechfiles"
-THSH="totalhash"
+VTSS="/home/sansforensics/volgui/tools/dsvtsubmit.py"
 #
 # Need to read in the config file here
 # For now we will statically
-FILE="PhysicalMemory_CAF6AADD110CEB8293D2112B4C8C58BE"
-PRFL="Win7SP1x86"
-APIK="4f2a278c757ca832fskdjfhssdfjkh;jkhsfs91e36d862884bc8458512794e55"
-CASE="cohans"
+
+#
+# Get info from the user
+# Get the case name from the user
+echo "What is the case name? :"
+read CASE
+#
+# What is the memory file name
+echo "What is the memory file name? :"
+read FILE
+
 
 cd $HOME/$CASE/procexedump/
 
@@ -21,4 +25,8 @@ for i in *.exe; do
 	echo $i >> filelist.txt
 done
 
+#
+# Get more info from user
+echo "What is your API Key for VT? :"
+read APIK
 python $VTSS -k $APIK -f $HOME/$CASE/procexedump/filelist.txt

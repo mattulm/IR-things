@@ -113,17 +113,13 @@ fi
 # We can remove the results with no findings.
 
 #
-# Clean up the Virus Total Files
-
-
-#
 # Clean the malcode files up.
-echo " Checking the malc0de database files "
+echo " Checking the malc0de database files as they are the easiest "
 echo " " >> $HOME/$CASE/evidence/$FILE.log
 echo "------------------------------------------------------------" >> $HOME/$CASE/evidence/$FILE.log
 echo " Checking the malc0de database files " >> $HOME/$CASE/evidence/$FILE.log
 echo "------------------------------------------------------------" >> $HOME/$CASE/evidence/$FILE.log
-for i in $HOME/$CASE/$DIR/iplookup/malc0de/*malc0de.html; do
+for i in $HOME/$CASE/$DIR/iplookup/malc0de/*.malc0de.html; do
 	if grep -q "yielded no results" $i; then
 		echo "$i was not found in the malcode databse. "; >> $HOME/$CASE/evidence/$FILE.log
 		# rm -f $i
@@ -133,16 +129,76 @@ for i in $HOME/$CASE/$DIR/iplookup/malc0de/*malc0de.html; do
 	fi
 done
 echo " "
+echo " "
+
+# No results!
+# Clean up the ISEC Exposure files.
+echo " Checking the ISEC Exposure database files "
+echo " These are also pretty easy "
+echo " " >> $HOME/$CASE/evidence/$FILE.log
+echo "------------------------------------------------------------" >> $HOME/$CASE/evidence/$FILE.log
+echo " Checking the ISEC Exposure database files " >> $HOME/$CASE/evidence/$FILE.log
+echo "------------------------------------------------------------" >> $HOME/$CASE/evidence/$FILE.log
+for i in $HOME/$CASE/$DIR/iplookup/malc0de/*.exposure.html; do
+        if grep -q ">No results!" $i; then
+                echo "$i was not found in the ISEC Exposure databse. "
+                echo "$i was not found in the ISEC Exposure databse. " >> $HOME/$CASE/evidence/$FILE.log
+                # rm -f $i
+        else
+                mv $i $HOME/$CASE/evidence/iplookup/;
+		echo "$i - positive match in the ISEC Exposure database. "
+                echo "$i - positive match in the ISEC Exposure database. " >> $HOME/$CASE/evidence/$FILE.log
+        fi
+done
+echo " "
+echo " "
+
 
 #
 # TAR up the un-needed files. Move back to home afterwards.
+echo "Archive the malcode files."
 cd $HOME/$CASE/text/iplookup/
 tar zcf malc0de.tgz malc0de/
-rm -rf malc0de
+rm -rf malc0de/
 cd $HOME
 
 #
-# Clean up the 
+# Clean up the ISEC exposure files
+cd $HOME/$CASE/text/iplookup/
+tar zcf exposure.tgz exposure/
+rm -rf exposure/
+cd $HOME
+
+#
+# Check some of the virus total files
+echo " checking the Virus Total files "
+echo " "
+sleep 2;
+echo " "
+echo " This the first round of checks "
+echo " This will check if there is any record of the IP in Virus Total. "
+echo " If VirusTotal has never resolved any domain name from the submitted IP address "
+echo " That file will be deleted. "
+echo " " >> $HOME/$CASE/evidence/$FILE.log
+echo "------------------------------------------------------------" >> $HOME/$CASE/evidence/$FILE.log
+echo " This is the first round of checks " >> $HOME/$CASE/evidence/$FILE.log
+echo " This will check if there is any record of the IP in Virus Total. " >> $HOME/$CASE/evidence/$FILE.log
+echo " If VirusTotal has never resolved any domain name from the submitted IP address " >> $HOME/$CASE/evidence/$FILE.log
+echo " That file will be deleted. " >> $HOME/$CASE/evidence/$FILE.log
+echo " The IP and filename will be logged. " >> $HOME/$CASE/evidence/$FILE.log
+echo "------------------------------------------------------------" >> $HOME/$CASE/evidence/$FILE.log
+for i in $HOME/$CASE/$DIR/iplookup/malc0de/*.exposure.html; do
+        if grep -q "VirusTotal has never resolved any domain name" $i; then
+                echo "$i - VirusTotal has never resolved any domain name "; >> $HOME/$CASE/evidence/$FILE.log
+		echo " I will remove the following file - $i "
+		echo " VirusTotal has never resolved any domain name for this IP "
+                rm -f $i
+        fi
+done
+echo " "
+echo " "
+
+
 
 
 #

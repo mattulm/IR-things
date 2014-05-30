@@ -34,7 +34,7 @@ IDA Pro Free
 CCleaner
 Malcode Analyst Pack - http://sandsprite.com/blogs/index.php?uid=7&pid=185
 RegEx Coach - http://www.weitz.de/regex-coach/#install
-
+Virus Total Uploader - https://www.virustotal.com/en/documentation/desktop-applications/windows-uploader
 
 
 Packer Explorers:

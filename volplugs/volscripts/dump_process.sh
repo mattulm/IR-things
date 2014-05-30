@@ -11,7 +11,7 @@
 #
 #
 # Set up some global variables
-VOLT="vol.py"
+VOL="vol.py"
 HOME="/home/sansforensics"
 VCGT="/home/sansforensics/vcg"
 DSVT="/home/sansforensics/vcg/tools/dsvtsearch.py"
