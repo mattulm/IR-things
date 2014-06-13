@@ -1,0 +1,57 @@
+#!/bin/bash
+#
+#
+#
+#
+# Get some information from the user
+
+HOME="/home/sansforensics"
+
+echo " What is the case name? :"
+read CASE
+echo " "
+echo "What is the filename? :"
+read FILE
+echo " "
+
+#
+# Check a few things first.
+if [ ! -d "$HOME/$CASE/text" ]; then
+	echo " You have not set up your case yet ";
+fi
+if [ ! -d "$HOME/$CASE/text/strings" ]; then
+	echo " You have not run strings against the memory file yet ";
+fi
+
+#
+# Find out what they want to do with the full strings report.
+echo "Choices: http, irc, ftp, telnet, ssh, ip"
+read CMD
+case $CMD in
+	'http' )
+		cat $HOME/$CASE/text/strings/$FILE.strings.txt | egrep -i 'http|GET|POST|PULL|PUT|html|User-Agent|HTML|HTTP'
+		;;
+        'irc' )
+                cat $HOME/$CASE/text/strings/$FILE.strings.txt | egrep -i 'irc|IRC|join|chat|room'
+                ;;
+        'ftp' )
+                cat $HOME/$CASE/text/strings/$FILE.strings.txt | egrep -i 'ftp'
+                ;;
+        'telnet' )
+                cat $HOME/$CASE/text/strings/$FILE.strings.txt | egrep -i 'telnet'
+                ;;
+        'ssh' )
+                cat $HOME/$CASE/text/strings/$FILE.strings.txt | egrep -i 'ssh|scp'
+                ;;
+        'ip' )
+                cat $HOME/$CASE/text/strings/$FILE.strings.txt | grep -E -o '(25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)\.(25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)\.(25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)\.(25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)'
+                ;;
+
+	# Catch all for other input.
+	 *) echo "Invalid input"
+            	;;
+
+esac
+
+#
+# EOF
