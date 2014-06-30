@@ -126,7 +126,8 @@ echo " "
 ### Find out for them if they do not know.
 ###########################################################
 echo "One last bit of information is needed......"
-read -p "Do you know what profile to use on this memory sample? (y/n):" RESP
+echo "Do you know what profile to use on this memory sample? (y/n):"
+read RESP
 case $RESP in
 	y|Y )	echo" OK, then......"
         	echo "What profile would you like to use? :"

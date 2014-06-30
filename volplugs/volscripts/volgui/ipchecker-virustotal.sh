@@ -48,14 +48,6 @@ echo " This the first round of checks "
 echo " This will check if there is any record of the IP in Virus Total. "
 echo " If VirusTotal has never resolved any domain name from the submitted IP address "
 echo " That file will be deleted. "
-echo " " >> $HOME/$CASE/evidence/$FILE.log
-echo "------------------------------------------------------------" >> $HOME/$CASE/evidence/$FILE.log
-echo " This is the first round of checks " >> $HOME/$CASE/evidence/$FILE.log
-echo " This will check if there is any record of the IP in Virus Total. " >> $HOME/$CASE/evidence/$FILE.log
-echo " If VirusTotal has never resolved any domain name from the submitted IP address " >> $HOME/$CASE/evidence/$FILE.log
-echo " That file will be deleted. " >> $HOME/$CASE/evidence/$FILE.log
-echo " The IP and filename will be logged. " >> $HOME/$CASE/evidence/$FILE.log
-echo "------------------------------------------------------------" >> $HOME/$CASE/evidence/$FILE.log
 for i in $HOME/$CASE/$DDIR/ipfiles/vt/*.vt.html; do
         if grep -q "VirusTotal has never resolved any domain name" $i; then
                 echo "$i - VirusTotal has never resolved any domain name "; >> $HOME/$CASE/evidence/$FILE.log

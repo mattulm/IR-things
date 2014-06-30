@@ -40,6 +40,8 @@ elif [ "$TDIR" == "2" ]; then
         if [ ! -d "$HOME/$CASE/procmemdump" ]; then
                 echo "The Procmemdump folder does not exist. "
                 echo "Please run the dumper script first. "
+		echo " ";
+		exit;
         fi
 else
 	echo "That is not the correct input......"
@@ -59,8 +61,7 @@ for i in "${hasheslist[@]}"; do
 	if [ -f "$DDIR.$i.txt" ]; then
 		echo "The $i hashes already exists in this directory."
 		echo "It looks like this script has already been run."
-		echo "Please check that your input is correct."
-		echo "Exiting........"
+		echo " "
 		sleep 1;
 	fi
 done
